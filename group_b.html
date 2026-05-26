@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Pharm Assist - Ομάδα Β</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="brand">Pharm Assist</div>
+    <div class="nav-center">
+      <a href="index.html">Ομάδα Α</a>
+      <a href="group_b.html" class="active">Ομάδα Β</a>
+    </div>
+    <div class="nav-right">
+      <button class="nav-menu-btn" id="menuBtn" aria-label="Μενού" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-dropdown" id="navDropdown">
+        <a href="29_TEXNIKOS_FARMAKON_KALLYNTIKON_KAI_PAREMFERON_PROIONTON.pdf" target="_blank" rel="noopener">Κατάλογος Ερωτήσεων ΕΟΠΠΕΠ</a>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Ομάδα Β - Ερωτήσεις &amp; Απαντήσεις</h1>
+    <p class="subtitle">Τεχνικός Φαρμάκων, Καλλυντικών και Παρεμφερών Προϊόντων</p>
+  </header>
+
+  <section class="disclaimer" aria-label="Σημαντική σημείωση">
+    <div class="disclaimer-icon" aria-hidden="true">!</div>
+    <div class="disclaimer-body">
+      <div class="disclaimer-title">Σημαντική Σημείωση</div>
+      <p>Το περιεχόμενο της πλατφόρμας παράγεται με χρήση Τεχνητής Νοημοσύνης (AI) και δεν βασίζεται σε επίσημα εγχειρίδια ή έγκριση από πιστοποιημένους εκπαιδευτές ή τον ΕΟΠΠΕΠ.</p>
+      <p>Παρέχεται αποκλειστικά ως βοήθημα μελέτης και δεν υποκαθιστά την εκπαιδευτική διαδικασία από ΙΕΚ ή άλλους επίσημους φορείς.</p>
+    </div>
+  </section>
+
+  <main id="qa"></main>
+
+  <div class="bmc-wrapper" id="bmcWrapper">
+    <div class="bmc-bubble" id="bmcBubble">
+      Αν σου φάνηκε χρήσιμη η σελίδα, κέρασέ με έναν καφέ!
+      <button class="bmc-close" id="bmcClose" title="Κλείσιμο" aria-label="Κλείσιμο">x</button>
+    </div>
+    <a href="https://www.buymeacoffee.com/markes12" target="_blank" rel="noopener" class="bmc-btn">
+      <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="">
+      Buy me a coffee
+    </a>
+  </div>
+
+  <script src="omada_b.js" defer></script>
+  <script>
+    const close = document.getElementById('bmcClose');
+    const bubble = document.getElementById('bmcBubble');
+    const btn = document.getElementById('menuBtn');
+    const drop = document.getElementById('navDropdown');
+
+    close.addEventListener('click', () => {
+      bubble.style.display = 'none';
+    });
+
+    btn.addEventListener('click', () => {
+      const isOpen = drop.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        drop.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('click', e => {
+      if (!btn.contains(e.target) && !drop.contains(e.target)) {
+        drop.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+</html>
