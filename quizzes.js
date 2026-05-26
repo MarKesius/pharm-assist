@@ -15,9 +15,9 @@ const QUIZ_DATA = {
     { file: 'quiz_omada_b/3-Αναλυτικά Όργανα & Χρωματογραφία.json', icon: '🔬' },
     { file: 'quiz_omada_b/4-Τεχνολογία & Μικροβιολογία.json', icon: '🧬' },
     { file: 'quiz_omada_b/5-Ρεολογία & Φυσικοχημεία.json', icon: '📊' },
-    { file: 'quiz_omada_b/6-Κλλυντικά-Σύσταση & Τεχνολογία.json', icon: '💄' },
+    { file: 'quiz_omada_b/6-Καλλυντικά-Σύσταση & Τεχνολογία.json', icon: '💄' },
     { file: 'quiz_omada_b/7-Πρώτες Ύλες & Περαιτέρω Καλλυντικά.json', icon: '🌿' },
-    { file: 'quiz_omada_b/8-Φερμακολογία & Φαρμακευτική Τεχνολογία.json', icon: '💊' }
+    { file: 'quiz_omada_b/8-Φαρμακολογία & Φαρμακευτική Τεχνολογία.json', icon: '💊' }
   ]
 };
 
