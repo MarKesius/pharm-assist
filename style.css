@@ -41,22 +41,20 @@ nav {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
 }
 
-.brand {
-  font-weight: 700;
-  color: var(--accent);
-  white-space: nowrap;
-}
-
 .nav-center {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
+  grid-column: 2;
+  justify-self: center;
 }
 
 .nav-right {
   display: flex;
   justify-content: flex-end;
   position: relative;
+  grid-column: 3;
+  justify-self: end;
 }
 
 nav a {
@@ -405,16 +403,8 @@ main {
 
 @media (max-width: 720px) {
   nav {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto 1fr;
     gap: 0.75rem;
-  }
-
-  .brand {
-    display: none;
-  }
-
-  .nav-center {
-    justify-content: flex-start;
   }
 
   nav a {
@@ -441,6 +431,12 @@ main {
   }
 
   .bmc-bubble {
-    display: none;
+    max-width: min(220px, calc(100vw - 1.5rem));
+    font-size: 0.78rem;
+  }
+
+  .bmc-btn {
+    font-size: 0.88rem;
+    padding: 0.58rem 1rem;
   }
 }
