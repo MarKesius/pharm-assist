@@ -103,7 +103,7 @@ function showStartScreen() {
     <div class="quiz-start-screen">
       <h2>Είστε έτοιμοι;</h2>
       <p>Αυτό το κουίζ περιέχει <strong>${currentQuiz.questions.length}</strong> ερωτήσεις.</p>
-      <p>Διαθέτετε όσο χρόνο χρειάζεστε για να συμπληρώσετε κάθε ερώτηση.</p>
+      <p></p>
       <button class="quiz-btn-large" onclick="startQuizSession()">Έναρξη</button>
       <button class="quiz-btn-back" onclick="backToList()">Επιστροφή</button>
     </div>
