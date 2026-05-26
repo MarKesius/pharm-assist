@@ -94,6 +94,7 @@
 - **GitHub Pages**
 - **Netlify**
 - Οποιοδήποτε web server
+- **https://pharm-assist-swart.vercel.app/**
 
 ## Τεχνολογίες
 
